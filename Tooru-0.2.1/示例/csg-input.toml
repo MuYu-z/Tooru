@@ -1,0 +1,44 @@
+# 2018-8-13
+# 博弈表示示例（reg）
+
+title = "三人投票博弈"
+comment = "示例"
+game_type = "csg"
+
+# 离散博弈的回报使用回报矩阵
+payoffs = [
+  [
+    #a=1
+    #c=1,   c=2,   c=3
+    2,0,1, 2,0,1, 2,0,1, #b=1
+    2,0,1, 1,2,0, 2,0,1, #b=2
+    2,0,1, 2,0,1, 0,1,2, #b=3
+    #a=2
+    2,0,1,1,2,0,2,0,1,
+    1,2,0,1,2,0,1,2,0,
+    2,0,1,1,2,0,0,1,2,
+    #a=3
+    2,0,1,2,0,1,0,1,2,
+    2,0,1,1,2,0,0,1,2,
+    0,1,2,0,1,2,0,1,2,
+  ]
+]
+# 则：
+# payoff[((2-1)*3*3 + (2-1)*3 + (2-1))*3 + 3] 为
+# (a=2,b=2,c=2) 时 c 的回报 （从 1 开始数）
+# 即：
+# ?'s payoff(a,b,c) = ((a-1)*3*3 + (b-1)*3 + (c-1))*3 + ?
+
+types = [
+  "Voter 3 2 1"
+] # label players_num action_set payoff_idx
+
+value_switch = 0
+
+action_sets= [
+"1 3", # label/value for value_switch on;
+"2 3 4"
+]
+# Maybe range will be supported. BTW, continous range will eventurly turn to discreted.
+
+# After process, all joined strings become arrays.

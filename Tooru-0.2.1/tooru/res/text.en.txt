@@ -1,0 +1,12 @@
+-- 2019.4.4
+-- Project Tooru
+-- EN String file (lua)
+
+return {
+  gnu_gpl = 'distributed under the GNU GPL',
+  version = 'version',
+  copyright = 'Copyright',
+
+  game_solve_tool = 'game solve tool',
+  gnne = 'Compute Nash equilibria using a global Newton method.',
+}

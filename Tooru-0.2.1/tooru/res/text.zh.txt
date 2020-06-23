@@ -1,0 +1,12 @@
+-- 2019.4.17
+-- Project Tooru
+-- ZH String file (lua)
+
+return {
+  gnu_gpl = '在 GNU GPL 协议下分发',
+  version = '版本',
+  copyright = '著作权',
+
+  game_solve_tool = '博弈求解工具',
+  gnne = '使用全局牛顿法计算纳什均衡。',
+}
